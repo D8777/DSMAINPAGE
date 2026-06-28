@@ -1,0 +1,1 @@
+export { InnovationStorySection } from "./InnovationStorySection";
