@@ -3,27 +3,45 @@ import { ArrowRight as ArrowRightIcon } from "lucide-react";
 const processSteps = [
   {
     number: "01",
-    title: "Quick Call",
+    title: "Website and lead-flow audit",
     description:
-      "30 minutes. You walk us through your current operations — what's working, what isn't, and where time is slipping through the cracks.",
+      "We review your current website, search presence, messaging, service structure, calls to action, and inquiry process. You will see where customers may be getting confused, losing trust, or leaving without contacting you.",
   },
   {
     number: "02",
-    title: "Clear Findings",
+    title: "Strategy and positioning",
     description:
-      "Within 48 hours, you receive a written summary of automation opportunities prioritized by revenue impact. Specific, not generic.",
+      "We define: Your ideal customers, priority services, service areas, competitive differences, core offer, calls to action, customer questions, and lead path. This gives the website a clear business purpose before design begins.",
   },
   {
     number: "03",
-    title: "You Decide",
+    title: "Copy and website build",
     description:
-      "Use the recommendations however you like. Build in-house, bring in another team, or work with us. No pressure either way.",
+      "We develop the page structure, messaging, design, service content, and conversion paths around your approved strategy.",
   },
+  {
+    number: "04",
+    title: "Search and tracking setup",
+    description:
+      "We prepare the core on-page structure for local search and AI-assisted discovery, then connect appropriate analytics and lead tracking.",
+  },
+  {
+    number: "05",
+    title: "Launch",
+    description:
+      "Your website is reviewed, tested, and launched once the core content and functionality are approved.",
+  },
+  {
+    number: "06",
+    title: "Optional automation",
+    description:
+      "After the website foundation is in place, we can add the Website Booking Assistant and other follow-up systems where they make sense.",
+  }
 ];
 
 export const ProcessSection = (): JSX.Element => {
   return (
-    <section className="relative w-full px-6 py-24 sm:px-10 lg:px-16">
+    <section className="relative w-full px-6 py-24 sm:px-10 lg:px-16 bg-[#0b0b0b]">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[400px] -translate-y-1/2 opacity-10"
@@ -35,22 +53,19 @@ export const ProcessSection = (): JSX.Element => {
             className="animate-fade-up text-xs font-semibold tracking-[0.3em] text-[#D4AF37] uppercase"
             style={{ animationDelay: "0.05s", animationFillMode: "both" }}
           >
-            What Happens Next
+            How it works
           </p>
           <h2
             className="animate-fade-up text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
             style={{ animationDelay: "0.1s", animationFillMode: "both" }}
           >
-            Simple. Transparent.
-            <br />
-            No sales gymnastics.
+            A CLEAR PROCESS FROM AUDIT TO LAUNCH
           </h2>
           <p
             className="animate-fade-up text-base leading-relaxed text-[#737373]"
             style={{ animationDelay: "0.2s", animationFillMode: "both" }}
           >
-            The process is designed to give you clarity — not to pull you into a funnel.
-            Three steps, then you're in control.
+            Your website should be built around your business—not handed to you from a template.
           </p>
         </header>
 
@@ -62,7 +77,7 @@ export const ProcessSection = (): JSX.Element => {
               <div
                 key={step.number}
                 className="animate-fade-up flex items-start gap-8"
-                style={{ animationDelay: `${0.3 + index * 0.15}s`, animationFillMode: "both" }}
+                style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: "both" }}
               >
                 {/* Number badge */}
                 <div className="relative flex h-12 w-12 shrink-0 items-center justify-center border border-[#D4AF37]/40 bg-[#111111]">
@@ -82,14 +97,12 @@ export const ProcessSection = (): JSX.Element => {
         </div>
 
         <div
-          className="animate-fade-up flex flex-col items-center gap-3 pt-4 text-center"
-          style={{ animationDelay: "0.75s", animationFillMode: "both" }}
+          className="animate-fade-up flex flex-col items-center gap-6 pt-4 text-center"
+          style={{ animationDelay: "0.9s", animationFillMode: "both" }}
         >
-          <div className="flex items-center gap-2 text-sm text-[#525252]">
-            <span>No commitment. No follow-up emails.</span>
-            <ArrowRightIcon className="h-4 w-4 text-[#D4AF37]" />
-            <span className="font-medium text-[#a3a3a3]">You decide what comes next.</span>
-          </div>
+          <button className="h-14 rounded-none border border-[#D4AF37] bg-transparent px-10 text-base font-semibold tracking-wider text-[#D4AF37] uppercase transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0b0b0b]">
+            Start With a Free Audit
+          </button>
         </div>
       </div>
     </section>

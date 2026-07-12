@@ -1,6 +1,17 @@
 import { HeroSection } from "./sections/HeroSection";
-import { AuditOfferSection } from "./sections/AuditOfferSection";
+import { ProblemSection } from "./sections/ProblemSection";
+import { PositioningSection } from "./sections/PositioningSection";
+import { CoreServiceSection } from "./sections/CoreServiceSection";
+import { AeoGeoSection } from "./sections/AeoGeoSection";
+import { LeadGenerationSection } from "./sections/LeadGenerationSection";
+import { WebsiteAgentSection } from "./sections/WebsiteAgentSection";
 import { ProcessSection } from "./sections/ProcessSection";
+import { DeliverablesSection } from "./sections/DeliverablesSection";
+import { ComparisonSection } from "./sections/ComparisonSection";
+import { WhoItIsForSection } from "./sections/WhoItIsForSection";
+import { AboutSection } from "./sections/AboutSection";
+import { AuditOfferSection } from "./sections/AuditOfferSection";
+import { FaqSection } from "./sections/FaqSection";
 import { FinalCTASection } from "./sections/FinalCTASection";
 import { FooterSection } from "./sections/FooterSection";
 
@@ -24,8 +35,19 @@ export const NexaAi = (): JSX.Element => {
       />
       <div className="relative z-10 flex w-full flex-col items-stretch">
         <HeroSection />
-        <AuditOfferSection />
+        <ProblemSection />
+        <PositioningSection />
+        <CoreServiceSection />
+        <AeoGeoSection />
+        <LeadGenerationSection />
+        <WebsiteAgentSection />
         <ProcessSection />
+        <DeliverablesSection />
+        <ComparisonSection />
+        <WhoItIsForSection />
+        <AboutSection />
+        <AuditOfferSection />
+        <FaqSection />
         <FinalCTASection />
         <FooterSection />
       </div>
