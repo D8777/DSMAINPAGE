@@ -17,7 +17,7 @@ export const AboutSection = (): JSX.Element => {
           </Reveal>
         </header>
 
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.5fr] lg:gap-16">
           <div className="flex flex-col gap-6">
             <Reveal>
               <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
@@ -52,8 +52,8 @@ export const AboutSection = (): JSX.Element => {
           </div>
 
           <Reveal delay={0.12} className="w-full">
-            <div className="relative overflow-hidden border border-[#D4AF37]/40 bg-[#0b0b0b] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
-              <div className="relative aspect-[4/5] overflow-hidden bg-[#111111]">
+            <div className="relative mx-auto w-full max-w-[320px] overflow-hidden border border-[#D4AF37]/40 bg-[#0b0b0b] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.4)] lg:mx-0">
+              <div className="relative aspect-square overflow-hidden bg-[#111111]">
                 <img
                   src="/derek-founder.png"
                   alt="Derek, founder of DS Automations"
