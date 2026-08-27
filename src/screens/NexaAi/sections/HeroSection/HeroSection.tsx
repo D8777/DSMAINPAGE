@@ -1,20 +1,26 @@
 import { Button } from "../../../../components/ui/button";
 
-const navLinks = ["Services", "Solutions", "About", "Contact"];
+const navLinks = ["Reputation", "Clarity", "AEO / GEO", "Contact"];
 
 const heroSupportPoints = [
   {
-    label: "Get Found Locally",
-    sub: "Service and location pages built around how nearby customers search.",
+    label: "Reputation",
+    sub: "Your site should look as credible as the work you deliver.",
   },
   {
-    label: "Turn Traffic Into Leads",
-    sub: "Clear offers and quote paths that move visitors toward action.",
+    label: "Clarity",
+    sub: "Visitors understand your services without effort or confusion.",
   },
   {
-    label: "Respond While You Work",
-    sub: "Add a website assistant that answers questions and captures lead details.",
+    label: "Visibility",
+    sub: "Search engines and AI assistants can interpret your business.",
   },
+];
+
+const floatingSignals = [
+  { text: "Outdated design", tone: "risk", delay: "0s" },
+  { text: "Confusing services", tone: "risk", delay: "0.8s" },
+  { text: "Unclear structure", tone: "risk", delay: "1.6s" },
 ];
 
 export const HeroSection = (): JSX.Element => {
@@ -24,17 +30,17 @@ export const HeroSection = (): JSX.Element => {
       <header className="relative z-20 flex w-full items-center justify-between border-b border-[#1a1a1a] bg-[#0b0b0b]/80 px-6 py-5 backdrop-blur-sm sm:px-10 lg:px-16">
         <div className="flex items-center gap-3">
           {/* DS Monogram */}
-          <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-[#D4AF37]/30 bg-[#280D3D]/40">
+          <div className="group flex h-10 w-10 items-center justify-center rounded-sm border border-[#D4AF37]/30 bg-[#280D3D]/40 transition-transform duration-300 hover:scale-105">
             <span className="bg-gradient-to-br from-[#D4AF37] to-[#a8892a] bg-clip-text text-lg font-bold leading-none tracking-tight text-transparent [-webkit-background-clip:text]">
               DS
             </span>
           </div>
 
           <div className="flex flex-col leading-none">
-            <span className="text-sm font-bold tracking-[0.15em] text-white uppercase">
+            <span className="text-sm font-bold uppercase tracking-[0.15em] text-white">
               DS
             </span>
-            <span className="text-[10px] tracking-[0.25em] text-[#D4AF37] uppercase">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37]">
               Automations
             </span>
           </div>
@@ -57,9 +63,9 @@ export const HeroSection = (): JSX.Element => {
 
         <Button
           type="button"
-          className="h-10 rounded-none border border-[#D4AF37] bg-transparent px-6 text-sm font-medium tracking-wider text-[#D4AF37] uppercase transition-all hover:bg-[#D4AF37] hover:text-[#0b0b0b]"
+          className="h-10 rounded-none border border-[#D4AF37] bg-transparent px-6 text-sm font-medium uppercase tracking-wider text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-[#0b0b0b]"
         >
-          Get Free Audit
+          Free Website Review
         </Button>
       </header>
 
@@ -73,46 +79,68 @@ export const HeroSection = (): JSX.Element => {
           }}
         />
 
+        {/* Floating risk signals */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden lg:block"
+        >
+          {floatingSignals.map((signal, index) => (
+            <span
+              key={signal.text}
+              className="animate-float absolute whitespace-nowrap border border-[#2a2a2a] bg-[#111111]/80 px-3 py-1.5 text-[11px] uppercase tracking-widest text-[#737373] backdrop-blur-sm"
+              style={{
+                left: index === 1 ? "auto" : `${6 + index * 4}%`,
+                right: index === 1 ? "8%" : "auto",
+                top: `${26 + index * 22}%`,
+                ["--animation-delay" as string]: signal.delay,
+              }}
+            >
+              {signal.text}
+            </span>
+          ))}
+        </div>
+
         <div className="relative z-10 flex max-w-5xl flex-col items-center gap-8 text-center">
           {/* Eyebrow */}
           <p
-            className="animate-fade-up text-sm font-semibold tracking-[0.3em] uppercase"
+            className="animate-fade-up text-sm font-semibold uppercase tracking-[0.3em]"
             style={{
               color: "#D4AF37",
               animationDelay: "0.05s",
               animationFillMode: "both",
             }}
           >
-            Websites and lead systems for auto detailers
+            Website modernization for local businesses
           </p>
 
-          {/* Outcome-led headline */}
+          {/* Headline */}
           <h1
-            className="animate-fade-up text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl"
+            className="animate-fade-up text-balance text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl"
             style={{
               animationDelay: "0.15s",
               animationFillMode: "both",
             }}
           >
-            Turn more local searches
+            An outdated website
             <br />
             <span className="bg-gradient-to-r from-[#D4AF37] to-[#a8892a] bg-clip-text text-transparent [-webkit-background-clip:text]">
-              into detailing inquiries.
+              quietly costs you credibility.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p
-            className="animate-fade-up max-w-3xl text-lg leading-relaxed text-[#737373] sm:text-xl"
+            className="animate-fade-up max-w-3xl text-pretty text-lg leading-relaxed text-[#737373] sm:text-xl"
             style={{
               animationDelay: "0.25s",
               animationFillMode: "both",
             }}
           >
-            We build conversion-focused websites that help auto detailers get
-            found, earn trust, and turn visitors into quote requests. Then we
-            can add a 24/7 website assistant to capture and qualify leads while
-            you work.
+            When your website looks dated, customers trust you less, work harder
+            to understand you, and search engines and AI assistants struggle to
+            interpret what your business actually does. We modernize your website
+            so your reputation, your clarity, and your visibility all improve
+            together.
           </p>
 
           {/* CTAs */}
@@ -125,16 +153,16 @@ export const HeroSection = (): JSX.Element => {
           >
             <Button
               type="button"
-              className="h-14 rounded-none bg-[#D4AF37] px-10 text-base font-semibold tracking-wider text-[#0b0b0b] uppercase transition-all duration-300 hover:bg-[#c4a030] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]"
+              className="h-14 rounded-none bg-[#D4AF37] px-10 text-base font-semibold uppercase tracking-wider text-[#0b0b0b] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c4a030] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]"
             >
-              Get My Free Website Audit
+              Get My Free Website Review
             </Button>
 
             <a
               href="#"
               className="text-sm font-medium tracking-wide text-[#737373] underline-offset-4 transition-colors hover:text-white hover:underline"
             >
-              See How It Works
+              See What We Improve
             </a>
           </div>
 
@@ -146,8 +174,8 @@ export const HeroSection = (): JSX.Element => {
               animationFillMode: "both",
             }}
           >
-            Built specifically for detailing businesses. No generic templates.
-            No vague AI pitch.
+            Reputation, customer clarity, and AEO / GEO visibility. No templates.
+            No guaranteed-ranking promises.
           </p>
 
           {/* Hero support points */}
@@ -158,12 +186,15 @@ export const HeroSection = (): JSX.Element => {
               animationFillMode: "both",
             }}
           >
-            {heroSupportPoints.map((item) => (
+            {heroSupportPoints.map((item, index) => (
               <div
                 key={item.label}
-                className="flex flex-col items-center gap-1.5 border-[#1a1a1a] px-8 py-6 sm:border-r last:border-r-0"
+                className="group flex flex-col items-center gap-1.5 border-[#1a1a1a] px-8 py-6 transition-colors last:border-r-0 hover:bg-[#111111]/60 sm:border-r"
               >
-                <span className="text-sm font-bold tracking-widest text-[#D4AF37] uppercase">
+                <span
+                  className="animate-bounce-soft text-sm font-bold uppercase tracking-widest text-[#D4AF37]"
+                  style={{ ["--animation-delay" as string]: `${index * 0.3}s` }}
+                >
                   {item.label}
                 </span>
                 <span className="text-xs leading-relaxed text-[#525252]">

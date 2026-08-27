@@ -1,74 +1,93 @@
+import { Reveal } from "../../components/Reveal";
+
+const pillars = [
+  {
+    tag: "Reputation",
+    title: "A first impression that matches your work",
+    body: "Modern layout, confident typography, real photography, and a presentation standard that signals an established, active business.",
+  },
+  {
+    tag: "Reputation",
+    title: "Proof placed where it changes minds",
+    body: "Reviews, credentials, experience, guarantees, and completed work presented as evidence rather than decoration.",
+  },
+  {
+    tag: "Clarity",
+    title: "Services people can understand instantly",
+    body: "Each service explained in plain language, with scope, expectations, and who it is right for, on its own dedicated page.",
+  },
+  {
+    tag: "Clarity",
+    title: "Mobile-first experience",
+    body: "Fast, readable, thumb-friendly pages, because most people will judge your business on a phone screen first.",
+  },
+  {
+    tag: "Visibility",
+    title: "Content organized for interpretation",
+    body: "Clean hierarchy, descriptive headings, structured answers, and consistent business details so search and AI systems can read you correctly.",
+  },
+  {
+    tag: "Visibility",
+    title: "Clear service, area, and expertise signals",
+    body: "Who you are, what you do, where you do it, and why you are qualified, stated explicitly instead of implied.",
+  },
+];
+
+const tagColor: Record<string, string> = {
+  Reputation: "text-[#D4AF37] border-[#D4AF37]/30",
+  Clarity: "text-[#c9a4e0] border-[#c9a4e0]/30",
+  Visibility: "text-[#8fb7d9] border-[#8fb7d9]/30",
+};
+
 export const CoreServiceSection = (): JSX.Element => {
   return (
-    <section className="relative w-full px-6 py-24 sm:px-10 lg:px-16 bg-[#0a0a0a]">
+    <section className="relative w-full bg-[#0a0a0a] px-6 py-24 sm:px-10 lg:px-16">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-16">
         <header className="flex max-w-3xl flex-col items-center gap-6 text-center">
-          <h2 className="animate-fade-up text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-            THE DETAILER GROWTH WEBSITE
-          </h2>
-          <p className="animate-fade-up text-lg leading-relaxed text-[#737373]">
-            Built to get found, build trust, and generate inquiries.<br/><br/>
-            Your website becomes the foundation of your lead-generation system.<br/><br/>
-            Every page has a job: attract the right customer, answer the right question, and move the visitor toward a clear next step.
-          </p>
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+              What we do
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Website modernization built on three outcomes
+            </h2>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="text-pretty text-lg leading-relaxed text-[#737373]">
+              We rebuild the parts of your website that shape trust, remove
+              friction, and make your business legible to modern search. Every
+              decision serves one of those three outcomes.
+            </p>
+          </Reveal>
         </header>
 
-        <div className="w-full">
-          <h3 className="text-2xl font-bold text-center text-[#D4AF37] mb-12">What your website can include</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111]">
-              <h4 className="text-lg font-bold text-white">Conversion-focused homepage</h4>
-              <p className="text-sm text-[#737373]">A clear explanation of what you offer, who you help, why customers should trust you, and what they should do next.</p>
-            </div>
-            
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111] row-span-2">
-              <h4 className="text-lg font-bold text-white">Service pages</h4>
-              <p className="text-sm text-[#737373] mb-4">Dedicated pages for services such as:</p>
-              <ul className="text-sm text-[#a3a3a3] flex flex-col gap-2 mb-4 list-disc pl-4">
-                <li>Ceramic coating</li>
-                <li>Paint correction</li>
-                <li>Interior detailing</li>
-                <li>Exterior detailing</li>
-                <li>Mobile detailing</li>
-                <li>Paint protection film</li>
-                <li>Maintenance detailing</li>
-                <li>Fleet or commercial services</li>
-              </ul>
-              <p className="text-sm text-[#737373] mt-auto border-t border-[#1a1a1a] pt-4">Each page is written around customer intent rather than a list of features.</p>
-            </div>
-
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111]">
-              <h4 className="text-lg font-bold text-white">Service-area pages</h4>
-              <p className="text-sm text-[#737373]">Pages that clearly communicate the cities, neighborhoods, and areas you serve without relying on thin, repetitive location copy.</p>
-            </div>
-
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111]">
-              <h4 className="text-lg font-bold text-white">Quote and booking paths</h4>
-              <p className="text-sm text-[#737373]">Clear calls to action that guide visitors toward calling, requesting a quote, submitting vehicle details, or booking the next appropriate step.</p>
-            </div>
-
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111]">
-              <h4 className="text-lg font-bold text-white">Portfolio and trust sections</h4>
-              <p className="text-sm text-[#737373]">Before-and-after work, reviews, process explanations, frequently asked questions, and other proof organized to support the sale.</p>
-            </div>
-
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111]">
-              <h4 className="text-lg font-bold text-white">Mobile-first experience</h4>
-              <p className="text-sm text-[#737373]">A clear experience for customers searching from their phones, where most local buying decisions begin.</p>
-            </div>
-
-            <div className="flex flex-col gap-3 p-6 border border-[#1a1a1a] bg-[#111111]">
-              <h4 className="text-lg font-bold text-white">Tracking foundation</h4>
-              <p className="text-sm text-[#737373]">Analytics and conversion tracking can be set up so you can better understand which pages and offers are producing inquiries.</p>
-            </div>
-          </div>
+        <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {pillars.map((pillar, index) => (
+            <Reveal key={pillar.title} delay={0.06 * index}>
+              <div className="group flex h-full flex-col gap-4 border border-[#1a1a1a] bg-[#111111] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/40">
+                <span
+                  className={`w-fit border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] ${tagColor[pillar.tag]}`}
+                >
+                  {pillar.tag}
+                </span>
+                <h3 className="text-lg font-bold leading-snug text-white">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#737373]">
+                  {pillar.body}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
 
-        <div className="mt-8">
-          <button className="h-14 rounded-none bg-[#D4AF37] px-10 text-base font-semibold tracking-wider text-[#0b0b0b] uppercase transition-all duration-300 hover:bg-[#c4a030] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]">
-            Request My Website Audit
+        <Reveal delay={0.1}>
+          <button className="h-14 rounded-none bg-[#D4AF37] px-10 text-base font-semibold uppercase tracking-wider text-[#0b0b0b] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c4a030] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]">
+            Review My Current Website
           </button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
