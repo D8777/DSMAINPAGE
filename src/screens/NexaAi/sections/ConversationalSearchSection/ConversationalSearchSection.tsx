@@ -37,7 +37,7 @@ export const ConversationalSearchSection = (): JSX.Element => {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              People no longer type keywords. They ask full questions.
+              People no longer type keywords. They ask questions.
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
