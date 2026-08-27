@@ -53,7 +53,7 @@ export const AboutSection = (): JSX.Element => {
 
           <Reveal delay={0.12} className="w-full">
             <div className="relative overflow-hidden border border-[#D4AF37]/40 bg-[#0b0b0b] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#111111]">
+              <div className="relative aspect-[4/5] overflow-hidden bg-[#111111]">
                 <img
                   src="/derek-founder.png"
                   alt="Derek, founder of DS Automations"

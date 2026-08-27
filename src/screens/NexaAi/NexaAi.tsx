@@ -7,6 +7,7 @@ import { AiStructureSection } from "./sections/AiStructureSection";
 import { AeoGeoSection } from "./sections/AeoGeoSection";
 import { ProcessSection } from "./sections/ProcessSection";
 import { DeliverablesSection } from "./sections/DeliverablesSection";
+import { AboutSection } from "./sections/AboutSection";
 import { FaqSection } from "./sections/FaqSection";
 import { FinalCTASection } from "./sections/FinalCTASection";
 import { FooterSection } from "./sections/FooterSection";
@@ -39,6 +40,7 @@ export const NexaAi = (): JSX.Element => {
         <AeoGeoSection />
         <ProcessSection />
         <DeliverablesSection />
+        <AboutSection />
         <FaqSection />
         <FinalCTASection />
         <FooterSection />
