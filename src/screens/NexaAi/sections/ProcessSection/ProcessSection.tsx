@@ -1,108 +1,105 @@
-import { ArrowRight as ArrowRightIcon } from "lucide-react";
+import { Reveal } from "../../components/Reveal";
 
 const processSteps = [
   {
     number: "01",
-    title: "Website and lead-flow audit",
+    title: "Reputation and clarity review",
     description:
-      "We review your current website, search presence, messaging, service structure, calls to action, and inquiry process. You will see where customers may be getting confused, losing trust, or leaving without contacting you.",
+      "We look at your website the way a first-time visitor does. Where does it look dated, where does it feel confusing, and where does it fail to reflect the quality of your work?",
   },
   {
     number: "02",
-    title: "Strategy and positioning",
+    title: "Visibility review",
     description:
-      "We define: Your ideal customers, priority services, service areas, competitive differences, core offer, calls to action, customer questions, and lead path. This gives the website a clear business purpose before design begins.",
+      "We examine how interpretable your site is to search engines and AI assistants: page subjects, headings, service and area signals, expertise signals, and consistency of business details.",
   },
   {
     number: "03",
-    title: "Copy and website build",
+    title: "Structure and messaging plan",
     description:
-      "We develop the page structure, messaging, design, service content, and conversion paths around your approved strategy.",
+      "We map your services, service areas, proof, and the real questions customers ask, then define the page structure and plain-language messaging that answers them.",
   },
   {
     number: "04",
-    title: "Search and tracking setup",
+    title: "Modernization",
     description:
-      "We prepare the core on-page structure for local search and AI-assisted discovery, then connect appropriate analytics and lead tracking.",
+      "We rebuild the design, hierarchy, content, and mobile experience so the site presents an established, credible business and reads effortlessly.",
   },
   {
     number: "05",
-    title: "Launch",
+    title: "AEO and GEO preparation",
     description:
-      "Your website is reviewed, tested, and launched once the core content and functionality are approved.",
+      "We organize the content into clean, self-contained answers with explicit entity details so answer engines and generative systems can interpret and cite your business accurately.",
   },
   {
     number: "06",
-    title: "Optional automation",
+    title: "Launch and refinement",
     description:
-      "After the website foundation is in place, we can add the Website Booking Assistant and other follow-up systems where they make sense.",
-  }
+      "We test the experience across devices, verify consistency of your business information, and identify the next round of clarity improvements.",
+  },
 ];
 
 export const ProcessSection = (): JSX.Element => {
   return (
-    <section className="relative w-full px-6 py-24 sm:px-10 lg:px-16 bg-[#0b0b0b]">
+    <section className="relative w-full bg-[#0b0b0b] px-6 py-24 sm:px-10 lg:px-16">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[400px] -translate-y-1/2 opacity-10"
-        style={{ background: "radial-gradient(ellipse at right, #280D3D 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at right, #280D3D 0%, transparent 70%)",
+        }}
       />
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-16">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-16">
         <header className="flex max-w-2xl flex-col items-center gap-5 text-center">
-          <p
-            className="animate-fade-up text-xs font-semibold tracking-[0.3em] text-[#D4AF37] uppercase"
-            style={{ animationDelay: "0.05s", animationFillMode: "both" }}
-          >
-            How it works
-          </p>
-          <h2
-            className="animate-fade-up text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
-            style={{ animationDelay: "0.1s", animationFillMode: "both" }}
-          >
-            A CLEAR PROCESS FROM AUDIT TO LAUNCH
-          </h2>
-          <p
-            className="animate-fade-up text-base leading-relaxed text-[#737373]"
-            style={{ animationDelay: "0.2s", animationFillMode: "both" }}
-          >
-            Your website should be built around your business—not handed to you from a template.
-          </p>
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+              How it works
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              From outdated site to credible, legible presence
+            </h2>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="text-pretty text-base leading-relaxed text-[#737373]">
+              Every step serves reputation, clarity, or visibility. Nothing is
+              added because it sounds impressive.
+            </p>
+          </Reveal>
         </header>
 
         <div className="relative w-full max-w-3xl">
-          {/* Vertical connector line */}
           <div className="absolute left-6 top-8 hidden h-[calc(100%-64px)] w-px bg-gradient-to-b from-[#D4AF37]/40 via-[#280D3D]/60 to-transparent sm:block" />
           <div className="flex flex-col gap-12">
             {processSteps.map((step, index) => (
-              <div
-                key={step.number}
-                className="animate-fade-up flex items-start gap-8"
-                style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: "both" }}
-              >
-                {/* Number badge */}
-                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center border border-[#D4AF37]/40 bg-[#111111]">
-                  <span className="font-mono text-xs font-bold text-[#D4AF37]">
-                    {step.number}
-                  </span>
-                  {/* Glow dot */}
-                  <div className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-[#D4AF37]" />
+              <Reveal key={step.number} delay={index * 0.08}>
+                <div className="group flex items-start gap-8">
+                  <div className="relative flex h-12 w-12 shrink-0 items-center justify-center border border-[#D4AF37]/40 bg-[#111111] transition-colors duration-300 group-hover:border-[#D4AF37]">
+                    <span className="font-mono text-xs font-bold text-[#D4AF37]">
+                      {step.number}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="animate-bounce-soft absolute -right-1 -top-1 h-2 w-2 rounded-full bg-[#D4AF37]"
+                      style={{
+                        ["--animation-delay" as string]: `${index * 0.25}s`,
+                      }}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 pt-2">
+                    <h3 className="text-xl font-bold text-white transition-colors group-hover:text-[#D4AF37]">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-[#737373]">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-2 pt-2">
-                  <h3 className="text-xl font-bold text-white">{step.title}</h3>
-                  <p className="text-sm leading-relaxed text-[#737373]">{step.description}</p>
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
-        </div>
-
-        <div
-          className="animate-fade-up flex flex-col items-center gap-6 pt-4 text-center"
-          style={{ animationDelay: "0.9s", animationFillMode: "both" }}
-        >
-          <button className="h-14 rounded-none border border-[#D4AF37] bg-transparent px-10 text-base font-semibold tracking-wider text-[#D4AF37] uppercase transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0b0b0b]">
-            Start With a Free Audit
-          </button>
         </div>
       </div>
     </section>

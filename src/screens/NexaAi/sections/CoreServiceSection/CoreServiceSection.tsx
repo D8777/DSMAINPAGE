@@ -84,9 +84,10 @@ export const CoreServiceSection = (): JSX.Element => {
         </div>
 
         <Reveal delay={0.1}>
-          <button className="h-14 rounded-none bg-[#D4AF37] px-10 text-base font-semibold uppercase tracking-wider text-[#0b0b0b] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c4a030] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]">
-            Review My Current Website
-          </button>
+          <p className="max-w-2xl text-pretty text-center text-sm leading-relaxed text-[#525252]">
+            Not every business needs a full rebuild. Some need focused
+            improvements to messaging, structure, and mobile experience.
+          </p>
         </Reveal>
       </div>
     </section>

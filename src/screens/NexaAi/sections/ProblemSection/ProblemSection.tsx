@@ -112,9 +112,6 @@ export const ProblemSection = (): JSX.Element => {
               You may never hear about it. People simply decide you are not the
               safest choice and move on.
             </p>
-            <button className="h-14 rounded-none border border-[#D4AF37] bg-transparent px-10 text-base font-semibold uppercase tracking-wider text-[#D4AF37] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:text-[#0b0b0b]">
-              Find the Gaps on My Website
-            </button>
           </div>
         </Reveal>
       </div>

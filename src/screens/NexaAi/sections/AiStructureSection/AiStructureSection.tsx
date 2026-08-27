@@ -89,9 +89,6 @@ export const AiStructureSection = (): JSX.Element => {
               can understand is the same website a customer can understand
               immediately.
             </p>
-            <button className="h-14 rounded-none bg-[#D4AF37] px-10 text-base font-semibold uppercase tracking-wider text-[#0b0b0b] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c4a030] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]">
-              Check How Clear My Site Is
-            </button>
           </div>
         </Reveal>
       </div>

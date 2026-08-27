@@ -1,72 +1,74 @@
-export const FaqSection = (): JSX.Element => {
-  const faqs = [
-    {
-      q: "Do you only work with auto detailers?",
-      a: "Auto detailing is our primary focus because the website, customer questions, service structure, visual proof, and sales process are different from those of other local businesses."
-    },
-    {
-      q: "Do I need a completely new website?",
-      a: "Not always. The audit may show that your existing site needs clearer copy, stronger service pages, better calls to action, or a more effective quote process rather than a complete rebuild."
-    },
-    {
-      q: "What is AEO?",
-      a: "Answer Engine Optimization helps structure your content so search platforms can more easily identify clear, useful answers to customer questions."
-    },
-    {
-      q: "What is GEO?",
-      a: "Generative Engine Optimization focuses on making your business information and expertise easier for AI-assisted search systems to understand and reference. Neither approach guarantees placement or recommendations. They improve the clarity, usefulness, and structure of your website."
-    },
-    {
-      q: "Can you guarantee first-page rankings?",
-      a: "No credible provider can guarantee a specific search position. Search performance depends on competition, location, website authority, reviews, content quality, technical factors, and other variables. We focus on building a stronger foundation and tracking meaningful improvement."
-    },
-    {
-      q: "What does the website assistant do?",
-      a: "The assistant can answer approved questions, collect vehicle and service information, qualify inquiries, and guide visitors toward the right next step. Its exact role is based on your services, pricing rules, and booking process."
-    },
-    {
-      q: "Will the assistant give customers incorrect prices?",
-      a: "It should only use pricing information and rules approved by your shop. For jobs that require inspection or judgment, it can provide a range, explain the factors involved, or collect information for a human estimate."
-    },
-    {
-      q: "Can the assistant book appointments?",
-      a: "It can be connected to a booking or consultation process when appropriate. Some shops may prefer the assistant to collect information first and send the lead to a team member for approval."
-    },
-    {
-      q: "Will automation replace personal service?",
-      a: "No. Good automation removes repetitive steps. It should create a faster path to human help when the customer needs it."
-    },
-    {
-      q: "How long does a website project take?",
-      a: "The timeline depends on the number of pages, content requirements, integrations, revisions, and how quickly the necessary business information is provided. A specific timeline is agreed upon before work begins."
-    },
-    {
-      q: "Can you help after the website launches?",
-      a: "Yes. Ongoing services may include new service pages, location content, conversion improvements, tracking, website maintenance, lead-generation support, and automation."
-    }
-  ];
+import { Reveal } from "../../components/Reveal";
 
+const faqs = [
+  {
+    q: "Do I need a completely new website?",
+    a: "Not always. Some businesses need a full modernization, while others need focused improvements to messaging, page structure, mobile experience, or how clearly their services are explained.",
+  },
+  {
+    q: "What does website modernization include?",
+    a: "It can include visual design, plain-language messaging, service page structure, proof and credentials placement, mobile-first layouts, navigation, and content organization for modern search.",
+  },
+  {
+    q: "What is AEO?",
+    a: "Answer Engine Optimization. It means structuring your content so answer engines can identify clear, self-contained answers to the questions your customers actually ask.",
+  },
+  {
+    q: "What is GEO?",
+    a: "Generative Engine Optimization. It means making your business information, services, service areas, and expertise easy for generative AI systems to interpret and describe accurately.",
+  },
+  {
+    q: "Why does conversational search change anything?",
+    a: "People increasingly describe a situation to an assistant instead of typing a short keyword. Assistants answer by summarizing sources they can interpret confidently, so vague or unstructured websites are simply left out of the answer.",
+  },
+  {
+    q: "Can you guarantee rankings or AI recommendations?",
+    a: "No. No credible provider can. We improve the clarity, structure, and quality of your website so that both people and machines can understand your business correctly.",
+  },
+  {
+    q: "Is this just adding keywords to my site?",
+    a: "No. Modern systems respond to specificity and structure, not keyword density. Stating what you do, who it is for, and where you do it clearly matters far more.",
+  },
+  {
+    q: "Do you only work with auto detailers?",
+    a: "Auto detailing is one area of focus, but the same reputation, clarity, and visibility problems affect contractors, home service companies, professional services, and other local businesses.",
+  },
+  {
+    q: "How long does a project take?",
+    a: "It depends on the number of pages, the content required, and how quickly business information is available. A specific timeline is agreed before work begins.",
+  },
+  {
+    q: "What happens after launch?",
+    a: "Ongoing work may include new service pages, service-area content, additional question-and-answer content, and continued clarity improvements.",
+  },
+];
+
+export const FaqSection = (): JSX.Element => {
   return (
-    <section className="relative w-full px-6 py-24 sm:px-10 lg:px-16 bg-[#0a0a0a]">
+    <section className="relative w-full bg-[#0a0a0a] px-6 py-24 sm:px-10 lg:px-16">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-16">
-        <header className="flex flex-col items-center text-center gap-4">
-          <h2 className="text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl uppercase">
-            Frequently Asked Questions
-          </h2>
+        <header className="flex flex-col items-center gap-4 text-center">
+          <Reveal>
+            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Frequently asked questions
+            </h2>
+          </Reveal>
         </header>
 
-        <div className="w-full flex flex-col gap-6">
+        <div className="flex w-full flex-col gap-6">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-[#111111] border border-[#1a1a1a] p-6">
-              <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3">
-                <span className="text-[#D4AF37] text-lg leading-none">Q.</span>
-                <span>{faq.q}</span>
-              </h3>
-              <p className="text-[#a3a3a3] text-sm leading-relaxed flex items-start gap-3">
-                <span className="text-[#525252] text-lg leading-none">A.</span>
-                <span>{faq.a}</span>
-              </p>
-            </div>
+            <Reveal key={faq.q} delay={Math.min(index, 5) * 0.06}>
+              <div className="border border-[#1a1a1a] bg-[#111111] p-6 transition-colors duration-300 hover:border-[#D4AF37]/30">
+                <h3 className="mb-3 flex items-start gap-3 text-lg font-bold text-white">
+                  <span className="text-lg leading-none text-[#D4AF37]">Q.</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="flex items-start gap-3 text-sm leading-relaxed text-[#a3a3a3]">
+                  <span className="text-lg leading-none text-[#525252]">A.</span>
+                  <span>{faq.a}</span>
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
