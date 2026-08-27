@@ -3,63 +3,83 @@ import { Reveal } from "../../components/Reveal";
 export const AboutSection = (): JSX.Element => {
   return (
     <section className="relative w-full border-t border-[#1a1a1a] px-6 py-24 sm:px-10 lg:px-16">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-12">
-        <header className="flex max-w-2xl flex-col items-center gap-4 text-center">
+      <div className="mx-auto flex max-w-6xl flex-col gap-14">
+        <header className="flex max-w-3xl flex-col gap-4">
           <Reveal>
-            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Why DS Automations
-            </h2>
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-[#D4AF37]">
+              About us
+            </p>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="text-pretty text-lg font-medium text-[#D4AF37]">
-              We close the gap between the quality you deliver and the way you
-              are represented online.
-            </p>
+            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              We tailor your website so you show up in conversational searches.
+            </h2>
           </Reveal>
         </header>
 
-        <div className="flex w-full flex-col items-stretch gap-8 md:flex-row">
-          <Reveal className="flex-1">
-            <div className="flex h-full flex-col justify-center border border-[#1a1a1a] bg-[#111111] p-8 text-center">
-              <p className="text-lg italic leading-relaxed text-[#737373]">
-                &ldquo;Most website providers focus on how a site looks. Very few
-                ask whether a customer, or an AI assistant, can actually
-                understand the business behind it.&rdquo;
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+          <div className="flex flex-col gap-6">
+            <Reveal>
+              <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
+                As a business owner, you are constantly balancing life, family,
+                and the daily grind of running your company. Who actually has
+                the time to design a website, let alone structure it for AEO
+                (Answer Engine Optimization) and GEO (Generative Engine
+                Optimization)?
               </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.12} className="flex-[2]">
-            <div className="relative flex h-full flex-col gap-6 overflow-hidden border border-[#D4AF37]/20 bg-[#0b0b0b] p-8">
-              <div
-                aria-hidden="true"
-                className="absolute right-0 top-0 h-32 w-32 bg-[#280D3D]/20 blur-3xl"
-              />
-              <h3 className="text-2xl font-bold text-white">
-                We work on three things, in order.
-              </h3>
-
-              <p className="leading-relaxed text-[#a3a3a3]">
-                First, reputation: your website should look like it belongs to an
-                established, active, credible business. Second, clarity: a
-                visitor should understand your services, your service area, and
-                your expertise without effort.
+            </Reveal>
+            <Reveal delay={0.08}>
+              <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
+                That sentence alone is a headache…
               </p>
-              <p className="leading-relaxed text-[#a3a3a3]">
-                Third, visibility: your content should be structured clearly
-                enough that search engines, answer engines, and AI assistants can
-                interpret and describe your business accurately.
+            </Reveal>
+            <Reveal delay={0.12}>
+              <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
+                The reality is that most agencies use slapped-together templates
+                and generic AI prompts. They swap in your logo, change the
+                colors, but those generic setups are completely invisible to
+                modern conversational search engines.
               </p>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
+                We do things differently. We take the time to understand your
+                brand vision and services. We tailor your site around the quality
+                of your work and the questions your customers have before
+                booking, making it easier for them to take the next step.
+              </p>
+            </Reveal>
+          </div>
 
-              <div className="mt-4 border-t border-[#1a1a1a] pt-6">
-                <p className="text-lg font-medium leading-relaxed text-[#D4AF37]">
-                  Your business may already be excellent. Your website should
-                  make that obvious to everyone, and everything, that looks.
+          <Reveal delay={0.12} className="w-full">
+            <div className="relative overflow-hidden border border-[#D4AF37]/40 bg-[#0b0b0b] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#111111]">
+                <img
+                  src="/derek-founder.png"
+                  alt="Derek, founder of DS Automations"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0b]/80 via-transparent to-transparent" />
+                <p className="absolute bottom-5 left-5 font-mono text-xs uppercase tracking-[0.24em] text-[#D4AF37]">
+                  Meet Derek
                 </p>
               </div>
+              <p className="px-2 pb-2 pt-5 text-center text-xl font-medium text-white sm:text-2xl">
+                &quot;Your Business is My Business&quot;
+              </p>
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={0.2}>
+          <div className="border-t border-[#1a1a1a] pt-8">
+            <p className="max-w-4xl text-pretty text-xl font-medium leading-relaxed text-[#D4AF37] sm:text-2xl">
+              This isn&apos;t just a tagline, it&apos;s our company culture. We
+              treat your business with the exact care, focus, and attention to
+              detail as if it were our own.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
