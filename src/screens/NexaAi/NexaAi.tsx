@@ -32,6 +32,7 @@ export const NexaAi = (): JSX.Element => {
       />
       <div className="relative z-10 flex w-full flex-col items-stretch">
         <HeroSection />
+        <AboutSection />
         <ProblemSection />
         <PositioningSection />
         <CoreServiceSection />
@@ -40,7 +41,6 @@ export const NexaAi = (): JSX.Element => {
         <AeoGeoSection />
         <ProcessSection />
         <DeliverablesSection />
-        <AboutSection />
         <FaqSection />
         <FinalCTASection />
         <FooterSection />
