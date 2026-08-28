@@ -30,17 +30,11 @@ export const HeroSection = (): JSX.Element => {
   return (
     <>
       <header className="relative z-20 flex w-full items-center justify-between border-b border-[#1a1a1a] bg-[#0b0b0b]/80 px-6 py-5 backdrop-blur-sm sm:px-10 lg:px-16">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-[#D4AF37]/30 bg-[#280D3D]/40 transition-transform duration-300 hover:scale-105">
-            <span className="bg-gradient-to-br from-[#D4AF37] to-[#a8892a] bg-clip-text text-lg font-bold leading-none tracking-tight text-transparent [-webkit-background-clip:text]">
-              DS
-            </span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-sm font-bold uppercase tracking-[0.15em] text-white">DS</span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37]">Automations</span>
-          </div>
-        </div>
+        <img
+          alt="DS Automations logo"
+          src="/logo.png"
+          className="h-12 w-auto transition-transform duration-300 hover:scale-105 sm:h-14"
+        />
         <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
           {navLinks.map((item) => (
             <span key={item} className="text-sm font-medium tracking-wide text-[#a3a3a3]">{item}</span>
