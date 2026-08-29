@@ -1,13 +1,14 @@
 import { HeroSection } from "./sections/HeroSection";
+import { ConversationalSearchSection } from "./sections/ConversationalSearchSection";
 import { ProblemSection } from "./sections/ProblemSection";
 import { PositioningSection } from "./sections/PositioningSection";
+import { AboutSection } from "./sections/AboutSection";
 import { CoreServiceSection } from "./sections/CoreServiceSection";
-import { ConversationalSearchSection } from "./sections/ConversationalSearchSection";
+import { InfrastructureSection } from "./sections/InfrastructureSection";
 import { AiStructureSection } from "./sections/AiStructureSection";
 import { AeoGeoSection } from "./sections/AeoGeoSection";
 import { ProcessSection } from "./sections/ProcessSection";
 import { DeliverablesSection } from "./sections/DeliverablesSection";
-import { AboutSection } from "./sections/AboutSection";
 import { FaqSection } from "./sections/FaqSection";
 import { FinalCTASection } from "./sections/FinalCTASection";
 import { FooterSection } from "./sections/FooterSection";
@@ -32,11 +33,12 @@ export const NexaAi = (): JSX.Element => {
       />
       <div className="relative z-10 flex w-full flex-col items-stretch">
         <HeroSection />
-        <AboutSection />
+        <ConversationalSearchSection />
         <ProblemSection />
         <PositioningSection />
+        <AboutSection />
         <CoreServiceSection />
-        <ConversationalSearchSection />
+        <InfrastructureSection />
         <AiStructureSection />
         <AeoGeoSection />
         <ProcessSection />

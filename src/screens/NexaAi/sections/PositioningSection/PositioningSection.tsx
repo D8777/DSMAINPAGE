@@ -16,12 +16,12 @@ export const PositioningSection = (): JSX.Element => {
         <div className="flex flex-1 flex-col gap-6">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
-              The standard
+              What we do
             </p>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Your website should reflect the quality of your business
+              We fix the gap between the business you are and the business people see online
             </h2>
           </Reveal>
           <Reveal

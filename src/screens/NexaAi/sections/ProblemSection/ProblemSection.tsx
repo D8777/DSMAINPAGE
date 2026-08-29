@@ -4,32 +4,32 @@ import { Reveal } from "../../components/Reveal";
 const harms = [
   {
     icon: ShieldAlert,
-    title: "It damages your reputation",
-    body: "Visitors judge your business in seconds. A dated design, weak photography, or thin content can make an established business look inactive, careless, or less professional than it truly is.",
+    title: "A new customer doesn't know any of that yet",
+    body: "You know your business. Your customers may love you. You may do exceptional work. But someone landing on your site for the first time only sees what's in front of them.",
     points: [
-      "Looks behind competitors",
-      "Feels neglected or inactive",
-      "Undermines strong reviews",
+      "An old website, or one that looks abandoned",
+      "Confusing pages and vague services",
+      "Weak reviews or missing information",
     ],
   },
   {
     icon: Route,
-    title: "It creates customer friction",
-    body: "When people have to hunt for services, service areas, expertise, or answers to basic questions, the experience feels like work. Friction makes visitors hesitate, second-guess, and abandon.",
+    title: "Every bit of confusion is a reason to keep looking",
+    body: "A site that makes people work just to understand what you actually do creates friction. And friction is all it takes for someone to move on to the next result.",
     points: [
-      "Services are hard to understand",
-      "Key information is buried",
-      "Mobile experience is frustrating",
+      "Inconsistent business details",
+      "Hard-to-find answers to basic questions",
+      "A next step that isn't obvious",
     ],
   },
   {
     icon: EyeOff,
-    title: "It reduces your visibility",
-    body: "Google, answer engines, and AI assistants can only represent what they can interpret. Vague, unstructured pages make your business harder to understand, and therefore harder to surface.",
+    title: "Search engines and AI are asking the same questions",
+    body: "Search and AI systems are also trying to understand your business from what you put online. If the answers aren't clear, your digital presence is working against you.",
     points: [
-      "Unclear service and location signals",
-      "No structured answers to real questions",
-      "Weak expertise and proof signals",
+      "Who are you, and what do you do?",
+      "Where do you do it, and who do you serve?",
+      "Can you be trusted, and why should someone choose you?",
     ],
   },
 ];
@@ -41,12 +41,12 @@ export const ProblemSection = (): JSX.Element => {
         <header className="flex max-w-3xl flex-col items-center gap-6 text-center">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
-              The real cost
+              The gap
             </p>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              A great business can still look weak online
+              Your business may be better than your website makes it look
             </h2>
           </Reveal>
           <Reveal delay={0.16}>

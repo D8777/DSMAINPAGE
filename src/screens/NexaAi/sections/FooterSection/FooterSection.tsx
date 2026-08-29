@@ -1,10 +1,8 @@
 const focusAreas = [
   "Website Modernization",
-  "Reputation Presentation",
-  "Customer Clarity",
-  "AEO",
-  "GEO",
-  "Conversational Search Readiness",
+  "Reputation",
+  "Search & AI Visibility",
+  "Conversion & Clarity",
 ];
 
 export const FooterSection = (): JSX.Element => {

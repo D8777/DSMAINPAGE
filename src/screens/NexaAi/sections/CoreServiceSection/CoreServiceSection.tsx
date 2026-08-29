@@ -2,6 +2,16 @@ import { Reveal } from "../../components/Reveal";
 
 const pillars = [
   {
+    tag: "Search & AI Visibility",
+    title: "Structured so search engines understand your business",
+    body: "Clean hierarchy, descriptive headings, structured answers, and consistent business details so search and AI systems can read you correctly.",
+  },
+  {
+    tag: "Search & AI Visibility",
+    title: "Clear service, area, and expertise signals",
+    body: "Who you are, what you do, where you do it, and why you are qualified, stated explicitly instead of implied.",
+  },
+  {
     tag: "Reputation",
     title: "A first impression that matches your work",
     body: "Modern layout, confident typography, real photography, and a presentation standard that signals an established, active business.",
@@ -12,31 +22,21 @@ const pillars = [
     body: "Reviews, credentials, experience, guarantees, and completed work presented as evidence rather than decoration.",
   },
   {
-    tag: "Clarity",
-    title: "Services people can understand instantly",
-    body: "Each service explained in plain language, with scope, expectations, and who it is right for, on its own dedicated page.",
+    tag: "Conversion & Clarity",
+    title: "Getting found is only half the job",
+    body: "Once someone reaches you, your website needs to remove doubt, answer questions, and make taking the next step easy.",
   },
   {
-    tag: "Clarity",
+    tag: "Conversion & Clarity",
     title: "Mobile-first experience",
     body: "Fast, readable, thumb-friendly pages, because most people will judge your business on a phone screen first.",
-  },
-  {
-    tag: "Visibility",
-    title: "Content organized for interpretation",
-    body: "Clean hierarchy, descriptive headings, structured answers, and consistent business details so search and AI systems can read you correctly.",
-  },
-  {
-    tag: "Visibility",
-    title: "Clear service, area, and expertise signals",
-    body: "Who you are, what you do, where you do it, and why you are qualified, stated explicitly instead of implied.",
   },
 ];
 
 const tagColor: Record<string, string> = {
   Reputation: "text-[#D4AF37] border-[#D4AF37]/30",
-  Clarity: "text-[#c9a4e0] border-[#c9a4e0]/30",
-  Visibility: "text-[#8fb7d9] border-[#8fb7d9]/30",
+  "Conversion & Clarity": "text-[#c9a4e0] border-[#c9a4e0]/30",
+  "Search & AI Visibility": "text-[#8fb7d9] border-[#8fb7d9]/30",
 };
 
 export const CoreServiceSection = (): JSX.Element => {
@@ -56,9 +56,10 @@ export const CoreServiceSection = (): JSX.Element => {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="text-pretty text-lg leading-relaxed text-[#737373]">
-              We rebuild the parts of your website that shape trust, remove
-              friction, and make your business legible to modern search. Every
-              decision serves one of those three outcomes.
+              We structure your website so search engines understand your
+              business, strengthen the connection between your reputation and
+              your services, and make sure that once someone finds you, taking
+              the next step is easy.
             </p>
           </Reveal>
         </header>

@@ -32,21 +32,28 @@ export const ConversationalSearchSection = (): JSX.Element => {
         <header className="flex max-w-3xl flex-col items-center gap-6 text-center">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
-              How people search now
+              The way customers find businesses is changing
             </p>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              People no longer type keywords. They ask questions.
+              It used to be simple. Search, click, compare, call.
             </h2>
           </Reveal>
-          <Reveal delay={0.16}>
-            <p className="text-pretty text-lg leading-relaxed text-[#737373]">
-              Customers now open ChatGPT, Google AI results, Gemini, Copilot, or a
-              voice assistant and describe their situation in a full sentence.
-              The assistant answers with a short list of businesses it can
-              actually understand and defend. If your website is vague, you are
-              not in that list.
+          <Reveal delay={0.16} className="flex flex-col gap-3 text-pretty text-lg leading-relaxed text-[#737373]">
+            <p>
+              That behavior isn&apos;t disappearing. But it is changing. People are
+              asking AI for answers, recommendations, comparisons, and help
+              making decisions.
+            </p>
+            <p>
+              Instead of searching through business after business themselves,
+              they can ask &ldquo;who&apos;s the best company near me for what I
+              need?&rdquo; and let AI narrow the field.
+            </p>
+            <p className="text-white">
+              That creates a new problem: if your business is difficult to
+              understand online, why would it be easy for AI to recommend?
             </p>
           </Reveal>
         </header>

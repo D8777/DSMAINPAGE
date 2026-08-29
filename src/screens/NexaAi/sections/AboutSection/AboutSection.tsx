@@ -12,7 +12,7 @@ export const AboutSection = (): JSX.Element => {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              We tailor your website so you show up in conversational searches.
+              We tailor your website so people and AI both find it easy to trust.
             </h2>
           </Reveal>
         </header>
@@ -23,22 +23,21 @@ export const AboutSection = (): JSX.Element => {
               <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
                 As a business owner, you are constantly balancing life, family,
                 and the daily grind of running your company. Who actually has
-                the time to design a website, let alone structure it for AEO
-                (Answer Engine Optimization) and GEO (Generative Engine
-                Optimization)?
+                the time to rebuild a website, let alone make sure it still
+                makes sense to Google, AI, and everyone in between?
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
-                That sentence alone is a headache…
+                That question alone is a headache…
               </p>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="text-pretty text-lg leading-relaxed text-[#a3a3a3]">
                 The reality is that most agencies use slapped-together templates
                 and generic AI prompts. They swap in your logo, change the
-                colors, but those generic setups are completely invisible to
-                modern conversational search engines.
+                colors, but those generic setups are practically invisible to
+                the way customers and AI actually search today.
               </p>
             </Reveal>
             <Reveal delay={0.16}>

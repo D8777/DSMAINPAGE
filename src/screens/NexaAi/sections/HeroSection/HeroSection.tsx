@@ -55,14 +55,17 @@ export const HeroSection = (): JSX.Element => {
         <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-20">
           <Reveal className="max-w-4xl">
             <p className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">Website modernization for local businesses</p>
-            <h1 className="text-balance text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-8xl">Your business has grown. <span className="bg-gradient-to-r from-[#D4AF37] to-[#a8892a] bg-clip-text text-transparent [-webkit-background-clip:text]">Has your website?</span></h1>
+            <h1 className="text-balance text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">Your next customer may never search for you. <span className="bg-gradient-to-r from-[#D4AF37] to-[#a8892a] bg-clip-text text-transparent [-webkit-background-clip:text]">They may ask AI who to trust instead.</span></h1>
             <div className="mt-10 max-w-3xl space-y-5 text-pretty text-lg leading-relaxed text-[#a3a3a3] sm:text-xl">
-              <p>You’ve put years into your work, your reputation, and your customers.</p>
-              <p>But when someone looks you up, they don’t see all of that first.</p>
-              <p className="font-semibold text-white">They see your website.</p>
-              <p>If it looks outdated, makes your services hard to understand, or leaves people wondering what to do next, it can make a good business look less established than it really is.</p>
-              <p>We tailor websites to better reflect the business behind them and make them clearer for customers, search engines, and AI search.</p>
+              <p>As the way people discover and choose businesses changes, your website has a new job: make your business easy for people, search engines, and AI to understand, trust, and choose.</p>
             </div>
+            <a
+              href="#get-started"
+              className="group mt-8 inline-flex items-center gap-3 border border-[#D4AF37]/50 bg-[#D4AF37]/5 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37] transition-colors duration-300 hover:bg-[#D4AF37]/10"
+            >
+              Make sure they find you
+              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
           </Reveal>
 
           <div className="grid gap-px border border-[#262626] bg-[#262626] lg:grid-cols-3">
@@ -76,16 +79,21 @@ export const HeroSection = (): JSX.Element => {
           </div>
 
           <Reveal className="border-t border-[#D4AF37]/40 pt-12 lg:max-w-4xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">The real cost</p>
-            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">An outdated website doesn&apos;t always look broken. That&apos;s the problem.</h2>
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">The website isn&apos;t disappearing</p>
+            <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">Its job is getting bigger.</h2>
             <div className="mt-8 space-y-4 text-pretty text-lg leading-relaxed text-[#a3a3a3]">
-              <p>It still loads.</p>
-              <p>Your phone number is still there.</p>
-              <p>Maybe it even looks <em>good enough.</em></p>
-              <p>But a potential customer lands on it and something feels off.</p>
-              <p>The photos are old. The services aren&apos;t clear. The information is buried. The site doesn&apos;t match the quality they saw in your reviews or on Instagram.</p>
-              <p className="font-semibold text-white">So they leave.</p>
+              <p>Customers still visit your website. But now search engines and AI systems are reading it too.</p>
+              <p>If your website is outdated, confusing, hard to trust, or unclear about what you actually do, you&apos;re creating friction before a customer ever contacts you.</p>
+              <p>And as the way people search changes, that problem only gets bigger.</p>
+              <p className="font-semibold text-white">DS Automations tailors your website, strengthens your online reputation, and makes your business easier for people, search engines, and AI to understand.</p>
             </div>
+            <a
+              href="#get-started"
+              className="group mt-8 inline-flex items-center gap-3 border border-[#D4AF37]/50 bg-[#D4AF37]/5 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37] transition-colors duration-300 hover:bg-[#D4AF37]/10"
+            >
+              Modernize my business
+              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
           </Reveal>
         </div>
       </section>
