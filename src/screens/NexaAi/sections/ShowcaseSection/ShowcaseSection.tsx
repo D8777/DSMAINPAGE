@@ -169,7 +169,7 @@ export const ShowcaseSection = (): JSX.Element => {
           </Reveal>
           <Reveal delay={0.06}>
             <h2 className="text-balance text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              A live prototype, not a mockup
+              A system that removes friction
             </h2>
           </Reveal>
           <Reveal delay={0.12}>
